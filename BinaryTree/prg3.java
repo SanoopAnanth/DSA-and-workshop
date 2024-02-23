@@ -76,7 +76,7 @@ public class prg3 {
         obj.insert(4);
         obj.insert(8);
         obj.insert(9);
-        // obj.insert(10);
+        obj.insert(10);
         obj.inOrder();
     }
 }
