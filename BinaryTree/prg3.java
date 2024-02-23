@@ -67,6 +67,20 @@ public class prg3 {
         }
         return result;
     }
+    public TreeNode search(int key){
+        return search(root,key);
+    }
+    public TreeNode search(TreeNode root,int key){
+        if(root==null||root.data==key){
+            return root;
+        }
+        if(key>root.data){
+            return search(root.right,key);
+        }
+        else{
+            return search(root.left,key);
+        }
+    }
     public static void main(String[] args) {
         prg3 obj=new prg3();
         obj.insert(5);
@@ -78,5 +92,12 @@ public class prg3 {
         obj.insert(9);
         obj.insert(10);
         obj.inOrder();
+        System.out.println();
+        TreeNode result=obj.search(11);
+        if(result==null){
+            System.out.println("Key not found");
+        }else{
+            System.out.println("key found in the Binary tree");
+        }
     }
 }
