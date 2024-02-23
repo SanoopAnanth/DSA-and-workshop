@@ -1,5 +1,8 @@
 package BinaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class prg3 {
     private TreeNode root;
     private class TreeNode{
@@ -21,6 +24,34 @@ public class prg3 {
         second.left=fourth;
         second.right=fifth;
     }
+    public void insert(int value){
+        root=insert(root, value);
+    }
+    public TreeNode insert(TreeNode root,int value){
+        if(root==null){
+            root=new TreeNode(value);
+            return root;
+        }
+        if(value < root.data){
+            root.left=insert(root.left, value);
+        }
+        if(value>root.data){
+            root.right=insert(root.right, value);
+        }
+        return root;
+    }
+    public void inOrder(){
+        inOrder(root);
+    }
+    public void inOrder(TreeNode root)
+    {
+        if(root==null){
+            return;
+        }
+        inOrder(root.left);
+        System.out.print(root.data);
+        inOrder(root.right);
+    }
     public int findMax(TreeNode root){
         if(root==null){
             return Integer.MIN_VALUE;
@@ -38,8 +69,14 @@ public class prg3 {
     }
     public static void main(String[] args) {
         prg3 obj=new prg3();
-        obj.onCreate();
-        int result=obj.findMax(obj.root);
-        System.out.println(result);
+        obj.insert(5);
+        obj.insert(7);
+        obj.insert(3);
+        obj.insert(2);
+        obj.insert(4);
+        obj.insert(8);
+        obj.insert(9);
+        // obj.insert(10);
+        obj.inOrder();
     }
 }
