@@ -18,6 +18,19 @@ public class prg1 {
         }
         System.out.print("-->null");
     }
+    public void displayLast(int n){
+        ListNode i=head;
+        ListNode j=head;
+        while(n!=0){
+            j=j.next;
+            n--;
+        }
+        while(j!=null){
+            i=i.next;
+            j=j.next;
+        }
+        System.out.println(i.data);
+    }
     public static void main(String[] args) {
         prg1 obj=new prg1();
         obj.head=new ListNode(10);
@@ -28,6 +41,8 @@ public class prg1 {
         second.next=third;
         third.next=fourth;
         obj.display();
+        System.out.println();
+        obj.displayLast(3);
     }
 }
  
