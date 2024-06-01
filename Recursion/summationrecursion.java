@@ -23,7 +23,7 @@ public class summationrecursion {
     }
     public int factorial(int n){
         if(n==0) return 1;
-        return fact*=n*factorial(n-1);
+        return fact*=n*factorial(n-1); //re-initialization is very important to update value when it is not parameterized type recursion
     }
     public static void main(String[] args) {
         summationrecursion obj=new summationrecursion();
