@@ -10,7 +10,7 @@ public class fibbo {
     }
     public static void main(String[] args){
         fibbo obj=new fibbo();
-        int result=obj.fib(10);
+        int result=obj.fib(100);
         System.out.println(result);
     }
 }
