@@ -33,5 +33,6 @@ public class sqrtBinary {
         int x=sc.nextInt();
         double result=sqrtBin(x);
         System.out.printf("%.3f",result);
+        sc.close();
     }
 }
