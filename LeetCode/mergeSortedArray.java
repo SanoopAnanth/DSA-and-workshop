@@ -16,12 +16,12 @@ public class mergeSortedArray {
             }
             count++;
         }
-        if(j<=n){
+        if(j<n){
             result[count]=nums2[j];
             j++;
             count++;
         }
-        if(i<=m){
+        if(i<m){
             result[count]=nums1[i];
             i++;
             count++;
