@@ -19,5 +19,6 @@ public class armstrom {
         }else{
             System.out.println("Not an Armstrong");
         }
+        sc.close();
     }
 }
