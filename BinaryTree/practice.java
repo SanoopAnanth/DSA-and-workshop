@@ -13,7 +13,7 @@ class practice{
     }
     static class BinaryTree{
         static int idx=-1;
-        public static Node buildTree(int [] nodes){
+        public static Node buildTree(int [] nodes){ //{1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1}
             idx++;
             if(nodes[idx]==-1){
                 return null;
@@ -57,8 +57,8 @@ class practice{
         int [] nodes={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         Node root=BinaryTree.buildTree(nodes);
         System.out.println(root.data);
-        inorder(root);
-        System.out.println();
-        levelorder(root);
+        // inorder(root);
+        // System.out.println();
+        // levelorder(root);
     }
 }
