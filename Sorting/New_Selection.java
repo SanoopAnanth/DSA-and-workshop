@@ -1,10 +1,12 @@
 package Sorting;
-
-public class selection {
-    public int[] sort(int arr[]){
+import java.util.*;
+import java.lang.*;
+public class New_Selection {
+    public int [] select_sort(int [] arr){
         int n=arr.length-1;
-        for(int i=0;i<n;i++){
-            int min_index=i;
+        int min_index;
+        for(int i=0;i<n-1;i++){
+            min_index=i;
             for(int j=i+1;j<=n;j++){
                 if(arr[j]<arr[min_index]){
                     min_index=j;
@@ -17,11 +19,9 @@ public class selection {
         return arr;
     }
     public static void main(String[] args) {
-        selection obj=new selection();
-        int arr[]={4,2,5,6,3,7,1};
-        arr=obj.sort(arr);
-        for(int a:arr){
-            System.out.print(a+" ");
-        }
+        int a[]={3,2,6,5,1};
+        New_Selection obj=new New_Selection();
+        int result[]=obj.select_sort(a);
+        System.out.println(Arrays.toString(result));
     }
 }
