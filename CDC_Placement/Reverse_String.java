@@ -13,6 +13,8 @@ public class Reverse_String {
             System.out.print(a);
         }
         System.out.println();
+
+        //method two inplace change using two pointers
         int i=0;
         int j=ch.length-1;
         while(i<j){
